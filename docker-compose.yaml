@@ -1,0 +1,13 @@
+version: '3'
+services:
+  banking-app-backend:
+    image: 'rohit932/bankingappbackendimage'
+    ports:
+      - 20200:20200
+    environment:
+      - AUTH_COOKIE_NAME=auth
+      - JWT_SECRET_KEY=mysecret
+  banking-app-frontend:
+    image: 'rohit932/bankingappfrontendimage'
+    ports:
+      - 3000:3000
